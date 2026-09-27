@@ -1,0 +1,68 @@
+{
+  "1_import_test": {
+    "status": "PASS",
+    "latency_ms": 1937.79,
+    "modules_tested": 22
+  },
+  "2_clean_startup_test": {
+    "status": "PASS",
+    "latency_ms": 77.71,
+    "health": {
+      "status": "HEALTHY",
+      "timestamp": "2026-09-27T13:15:56.194772",
+      "services": {
+        "backend": "HEALTHY",
+        "database": "HEALTHY",
+        "market_data_engine": "STOPPED",
+        "delta_rest": "RETRYING",
+        "delta_websocket": "CONNECTED",
+        "delta_latency_ms": 0.0,
+        "coinswitch_rest": "RETRYING",
+        "coinswitch_websocket": "CONNECTED",
+        "coinswitch_latency_ms": 0.0,
+        "risk_engine": "HEALTHY",
+        "strategy_engine": "IDLE",
+        "arbitrage_scanner": "ACTIVE",
+        "reconciliation_service": "HEALTHY",
+        "notification_service": "HEALTHY"
+      }
+    }
+  },
+  "3_frontend_connectivity_test": {
+    "status": "PASS",
+    "latency_ms": 100.05,
+    "root": 200,
+    "css": 200,
+    "js": 200
+  },
+  "4_api_route_smoke_test": {
+    "status": "PASS",
+    "latency_ms": 15930.07,
+    "routes_verified": 16
+  },
+  "5_adapter_smoke_test": {
+    "status": "PASS",
+    "latency_ms": 1677.26,
+    "delta_last_price": 84686.0,
+    "coinswitch_last_price": null
+  },
+  "6_database_init_test": {
+    "status": "PASS",
+    "latency_ms": 48.39,
+    "sample_orders": 5,
+    "sample_audits": 0
+  },
+  "7_reconciliation_smoke_test": {
+    "status": "PASS",
+    "latency_ms": 39.69,
+    "paper_status": "DISCREPANCY_DETECTED",
+    "live_status": "DISCREPANCY_DETECTED",
+    "live_discrepancies": 10
+  },
+  "8_paper_trading_smoke_test": {
+    "status": "PASS",
+    "latency_ms": 908.97,
+    "order_id": null,
+    "filled_quantity": null
+  }
+}

@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  trading-terminal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: antigravity-crypto-terminal
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - MODE=paper
+      - ENVIRONMENT=production
+      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/trading_platform
+      - REDIS_URL=redis://redis:6379/0
+      - ENCRYPTION_KEY=uO_fG7eR4o8m_N3K8v1k5y6L2z9P0q4s7t1w3x5y7z8=
+      - JWT_SECRET=prod-jwt-secret-crypto-platform-2026
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - trading-net
+
+  db:
+    image: postgres:16-alpine
+    container_name: crypto-postgres-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: trading_platform
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - trading-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: crypto-redis-cache
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - trading-net
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  trading-net:
+    driver: bridge

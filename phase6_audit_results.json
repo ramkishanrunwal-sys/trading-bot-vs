@@ -1,0 +1,281 @@
+{
+  "timestamp": "2026-09-27T09:42:28.256553+00:00",
+  "safety_gate": {
+    "LIVE_TRADING_ENABLED": false,
+    "real_orders_placed": 0,
+    "live_order_endpoint_calls": 0,
+    "safety_barrier": "ENFORCED (HTTP 403 Forbidden on live order requests)"
+  },
+  "credentials": {
+    "delta": {
+      "key_present": false,
+      "secret_present": false,
+      "masked_key": "NOT_CONFIGURED",
+      "status": "NOT_CONFIGURED",
+      "auth_scheme": "HMAC-SHA256 (METHOD + TIMESTAMP + PATH + QUERY + BODY)"
+    },
+    "coinswitch": {
+      "key_present": false,
+      "secret_present": false,
+      "masked_key": "NOT_CONFIGURED",
+      "status": "NOT_CONFIGURED",
+      "auth_scheme": "Ed25519 (METHOD + PATH_WITH_QUERY + EPOCH)"
+    }
+  },
+  "delta_endpoints": {
+    "balances": {
+      "endpoint": "/v2/wallet/balances",
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.01,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: Exchange not connected. API credentials required."
+    },
+    "positions": {
+      "endpoint": "/v2/positions/margined",
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: Exchange not connected. API credentials required."
+    },
+    "open_orders": {
+      "endpoint": "/v2/orders",
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: Exchange not connected. API credentials required."
+    },
+    "order_history": {
+      "endpoint": "/v2/orders/history",
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: Exchange not connected. API credentials required."
+    },
+    "trade_history": {
+      "endpoint": "/v2/fills",
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: Exchange not connected. API credentials required."
+    },
+    "margin_mode": {
+      "endpoint": "/v2/positions/margined",
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: Exchange not connected. API credentials required."
+    },
+    "funding_history": {
+      "endpoint": "/v2/wallet/transactions",
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: Exchange not connected. API credentials required."
+    }
+  },
+  "coinswitch_endpoints": {
+    "spot_balances": {
+      "endpoint": "/user/portfolio",
+      "is_futures": false,
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: CoinSwitch API credentials required."
+    },
+    "futures_balances": {
+      "endpoint": "/user/portfolio",
+      "is_futures": true,
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: CoinSwitch API credentials required."
+    },
+    "positions": {
+      "endpoint": "/positions",
+      "is_futures": true,
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: CoinSwitch API credentials required."
+    },
+    "open_orders": {
+      "endpoint": "/orders",
+      "is_futures": true,
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: CoinSwitch API credentials required."
+    },
+    "order_history": {
+      "endpoint": "/orders",
+      "is_futures": true,
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: CoinSwitch API credentials required."
+    },
+    "trade_history": {
+      "endpoint": "/user/trades",
+      "is_futures": true,
+      "method": "GET",
+      "status": "NOT_CONFIGURED",
+      "status_code": null,
+      "latency_ms": 0.0,
+      "payload_valid": false,
+      "data_fields": [],
+      "record_count": 0,
+      "error": "NOT_CONFIGURED: CoinSwitch API credentials required."
+    }
+  },
+  "market_provenance": {
+    "delta": {
+      "symbol": "BTCUSD",
+      "last_price": 84746.0,
+      "mark_price": 84745.39529774,
+      "funding_rate": 0.0016504182542954535,
+      "funding_status": "LIVE",
+      "orderbook_bids_count": 5,
+      "orderbook_asks_count": 5,
+      "data_real": true
+    },
+    "coinswitch": {
+      "symbol": "BTC/USDT",
+      "last_price": null,
+      "mark_price": null,
+      "funding_rate": null,
+      "funding_status": "UNAVAILABLE",
+      "data_real": false
+    }
+  },
+  "arbitrage_audit": {
+    "total_pairs_evaluated": 0,
+    "active_opportunities_count": 0,
+    "coinswitch_funding_available": false,
+    "synthetic_rates_fabricated": 0,
+    "zero_synthetic_rule_enforced": true,
+    "actionable_opportunities": []
+  },
+  "reconciliation": {
+    "status": "DISCREPANCY_DETECTED",
+    "timestamp": "2026-09-27T09:42:59.644033+00:00",
+    "delta_balance": 0,
+    "coinswitch_balance": 0,
+    "delta_positions": 0,
+    "coinswitch_positions": 0,
+    "discrepancies_count": 8,
+    "discrepancies": [
+      {
+        "type": "ORDER_LOCAL_ONLY",
+        "target": "ORD-f6b892a62f",
+        "description": "Order ORD-f6b892a62f is marked OPEN locally but is missing from exchange open orders and history.",
+        "detected_at": "2026-09-27T09:42:59.644033+00:00"
+      },
+      {
+        "type": "ORDER_LOCAL_ONLY",
+        "target": "ORD-a5ec35d2a0",
+        "description": "Order ORD-a5ec35d2a0 is marked OPEN locally but is missing from exchange open orders and history.",
+        "detected_at": "2026-09-27T09:42:59.644033+00:00"
+      },
+      {
+        "type": "ORDER_LOCAL_ONLY",
+        "target": "ORD-8b3381170f",
+        "description": "Order ORD-8b3381170f is marked OPEN locally but is missing from exchange open orders and history.",
+        "detected_at": "2026-09-27T09:42:59.644033+00:00"
+      },
+      {
+        "type": "ORDER_LOCAL_ONLY",
+        "target": "ORD-1ebf174e19",
+        "description": "Order ORD-1ebf174e19 is marked OPEN locally but is missing from exchange open orders and history.",
+        "detected_at": "2026-09-27T09:42:59.644033+00:00"
+      },
+      {
+        "type": "ORDER_LOCAL_ONLY",
+        "target": "ORD-13f32d7c1a",
+        "description": "Order ORD-13f32d7c1a is marked SUBMITTED locally but is missing from exchange open orders and history.",
+        "detected_at": "2026-09-27T09:42:59.644033+00:00"
+      },
+      {
+        "type": "ORDER_LOCAL_ONLY",
+        "target": "ORD-bf978b4c61",
+        "description": "Order ORD-bf978b4c61 is marked SUBMITTED locally but is missing from exchange open orders and history.",
+        "detected_at": "2026-09-27T09:42:59.644033+00:00"
+      },
+      {
+        "type": "ORDER_LOCAL_ONLY",
+        "target": "ORD-9c6c70d55b",
+        "description": "Order ORD-9c6c70d55b is marked OPEN locally but is missing from exchange open orders and history.",
+        "detected_at": "2026-09-27T09:42:59.644033+00:00"
+      },
+      {
+        "type": "ORDER_LOCAL_ONLY",
+        "target": "ORD-96dd0f9b77",
+        "description": "Order ORD-96dd0f9b77 is marked SUBMITTED locally but is missing from exchange open orders and history.",
+        "detected_at": "2026-09-27T09:42:59.644033+00:00"
+      }
+    ]
+  },
+  "pnl_audit": {
+    "realized_pnl": 0,
+    "unrealized_pnl": 0,
+    "total_fees": 0.0,
+    "funding_pnl": 0.0,
+    "calculated_net_pnl": 0.0,
+    "reported_net_pnl": 0.0,
+    "formula": "net_pnl = realized_pnl + unrealized_pnl - total_fees + funding_pnl",
+    "verified": true
+  },
+  "safety_summary": {
+    "LIVE_TRADING_ENABLED": false,
+    "gate_status": "LOCKED (BLOCKED)",
+    "real_orders_count": 0,
+    "live_http_post_orders_calls": 0
+  }
+}
